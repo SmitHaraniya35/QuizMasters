@@ -5,7 +5,6 @@ Welcome to the QuizzoGenius Quiz Application, a web-based platform for creating 
 ## Table of Contents
 
 - [Features](#features)
-- [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Video Demonstration](#video-demonstration)
 - [Technologies Used](#technologies-used)
@@ -17,27 +16,6 @@ Welcome to the QuizzoGenius Quiz Application, a web-based platform for creating 
 - **Scoring:** 📈 The application automatically scores quizzes and provides results.
 - **Quiz History:** View a history of quizzes taken and their scores.
 - **User Authentication:** 🔒 Secure login and user authentication.
-
-## Getting Started 🚀
-
-To get started with the QuizzoGenius Quiz Application, follow these steps:
-
-1. **Clone the Repository:**
-
-- `git clone https://github.com/yourusername/QuizzoGenius.git`
-- `cd QuizzoGenius`
-
-2. **Set Up the Environment:**
-
-- Make sure you have the required technologies and dependencies installed.
-
-3. **Run the Application:**
-
-- Launch the application and access it in your web browser.
-
-4. **Create an Account:**
-
-- 🚀 Create a user account or sign in to start using the application.
 
 ## Usage 📋
 
