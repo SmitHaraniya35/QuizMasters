@@ -1,0 +1,40 @@
+﻿@model QuizApplicationMVC.Models.Quiz
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<div class="container mt-4 p-0">
+    <h1 class="text-white">Delete Quiz</h1>
+    <hr />
+    <div>
+        <dl class="row">
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.User.Name)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.User.Name)
+            </dd>
+        </dl>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <div class="mt-3">
+                <input type="submit" value="Delete" class="btn btn-danger" />
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+﻿@model List<QuizApplicationMVC.Models.QuizQuestion>
+
+@{
+    ViewData["Title"] = "Evaluation Result";
+}
+
+<style>
+    h1{
+        font-size: xxx-large;
+        font-weight: bold;
+    }
+    /* Dark mode styles */
+    .card{
+        background-color: rgba(17, 17, 17, 0.6)
+    }
+    .dark-mode {
+        background-color: rgba(17, 17, 17, 0.8); /* Dark background color */
+        color: #fff; /* Light text color */
+    }
+
+        .dark-mode .correct-answer {
+            color: #4CAF50; /* Green for correct answers */
+        }
+
+        .dark-mode .incorrect-answer {
+            color: #F44336; /* Red for incorrect answers */
+        }
+
+        .score {
+            font-size: xx-large;
+            font-weight: bold;
+            display: flex;
+            justify-content: right;
+        }
+
+
+</style>
+
+
+<div class="container mt-4 p-0">
+    
+    <h1 class="text-white">Evaluation Result</h1>
+    <hr />
+    <div class="container score">
+        <b>@TempData["CorrectAnswersCount"] / @Model.Count </b>
+    </div>
+    @foreach (var question in Model)
+    {
+        <div class="card mb-3">
+            <div class="card-header">
+                <h2>@question.QuestionName</h2>
+            </div>
+            <div class="card-body dark-mode">
+                @if (question.SelectedOption == question.CorrectOption)
+                {
+                    <p class="correct-answer">Selected Option: @question.SelectedOption (Correct)</p>
+                }
+                else
+                {
+                    <p class="incorrect-answer">Selected Option: @question.SelectedOption (Incorrect)</p>
+                }
+                <p>Option A: @question.OptionA</p>
+                <p>Option B: @question.OptionB</p>
+                <p>Option C: @question.OptionC</p>
+                <p>Option D: @question.OptionD</p>
+                <p>Correct Option: @question.CorrectOption</p>
+            </div>
+        </div>
+    }
+</div>
+<script>
+    window.addEventListener("popstate", function (e) {
+        if (window.location.pathname === '/Quiz/Evaluate') {
+            window.location.href = '/Home/Index';
+        }
+    });
+</script>
