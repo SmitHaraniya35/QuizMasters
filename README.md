@@ -1,6 +1,6 @@
 # QuizMaster Quiz Application 🚀
 
-Welcome to the QuizzoGenius Quiz Application, a web-based platform for creating and taking quizzes. This README provides an overview of the project and instructions on how to use the application.
+Welcome to the QuizMaster Quiz Application, a web-based platform for creating and taking quizzes. This README provides an overview of the project and instructions on how to use the application.
 
 ## Table of Contents
 
